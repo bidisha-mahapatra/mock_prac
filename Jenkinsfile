@@ -30,9 +30,5 @@ pipeline {
 			}
 		}
 	}
-	post {
-		success { 
-			echo 'the test is successful'
-		}
-	}
+	
 }
