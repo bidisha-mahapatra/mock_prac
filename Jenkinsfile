@@ -2,6 +2,10 @@ pipeline {
 
 	agent any 
 
+	triggers {
+		cron('H/2 * * * *')
+	}
+
 	stages {
 		stage('Initialisation') {
 			steps {
@@ -30,5 +34,9 @@ pipeline {
 			}
 		}
 	}
-	
+	post {
+		success { 
+			echo 'the test is successful'
+		}
+	}
 }
